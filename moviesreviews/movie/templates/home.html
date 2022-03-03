@@ -19,19 +19,19 @@
               </form>
               <p>Searching for {{ searchTerm }}</p>
               {% for movie in movies %}
-                <div v-for="movie in movies" class="col">
-                    <div class="card">
-                        <img class="card-img-top" src="{{movie.image.url}}"/>
-                        <div class="card-body">
+                <div v-for="movie in movies" style="heigth: 200px; width: 200px;" class="col">
+                    <div class="card" style="heigth: 200px; width: 200;">
+                        <img class="card-img-top" style="heigth: 150px; width: 150px;margin-left:25px;" src="{{movie.image.url}}"/>
+                        <div class="card-body"style="heigth: 150px; width: 150px;">
+
                         <h5 class="card-title fw-bold">{{ movie.title }}</h5>
                         <p class="card-text">{{ movie.description }}</p>
                         {%if movie.url%}
-                        <a href="{{movie.url}}" class="btn btn-primary">Movie Link</a>
+                            <a href="{{movie.url}}" class="btn btn-primary">Movie Link</a>
                         {% endif %}
                         </div>
                     </div>
                 </div>
-                <hr>
               {% endfor %}
             </div>
             <br />
